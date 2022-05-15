@@ -20,5 +20,5 @@ Route::get('/about',[PagesController::class,'about']);
 Route::get('/services',[PagesController::class,'services']);
 Route::resource('blog',blogControl::class);
 
-
+Route::post('/add',[blogControl::class,'store']);
 Route::get('/shop',[PagesController::class,'shop']);

@@ -42,12 +42,12 @@ class blogControl extends Controller
             'title'=>'required',
             'body'=>'required']);
         $blog=new blog;
-        $blog->title=$request->input('title');
+        $blog->title=$request->title;
         
-        $blog->body=$request->input('body');
+        $blog->body=$request->body;
         
         $blog->save();
-        return redirect('/blog');
+        return redirect('/home');
     }
 
     /**

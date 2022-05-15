@@ -1,7 +1,8 @@
 @extends('layouts.boiler');
 
 @section('content')
-<form action="{{url('blog')}}" method="POST">
+
+<form action="{{url('blog')}}" method="post">
     <label >Title: <input type="text" name="title" placeholder="Title"></label>
      <label>Body: <input type="text" name="body" placeholder="Body"></label>
      
