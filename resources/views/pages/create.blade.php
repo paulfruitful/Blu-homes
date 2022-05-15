@@ -2,7 +2,7 @@
 
 @section('content')
 
-<form action="{{url('blog')}}" method="post">
+<form action="{{route('blog.store')}}" method="post">
     <label >Title: <input type="text" name="title" placeholder="Title"></label>
      <label>Body: <input type="text" name="body" placeholder="Body"></label>
      
