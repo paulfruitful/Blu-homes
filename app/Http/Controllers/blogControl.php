@@ -47,7 +47,7 @@ class blogControl extends Controller
         $blog->body=$request->body;
         
         $blog->save();
-        return redirect('/home');
+        return redirect('/blog')->with('Success','Post Created Successfully');
     }
 
     /**
@@ -70,7 +70,7 @@ class blogControl extends Controller
      */
     public function edit($id)
     {
-        //
+        $blog=blog::find($id);
     }
 
     /**
