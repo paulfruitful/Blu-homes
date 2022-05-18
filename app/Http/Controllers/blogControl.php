@@ -71,6 +71,7 @@ class blogControl extends Controller
     public function edit($id)
     {
         $blog=blog::find($id);
+        return view('pages.edit')->with('blog',$blog);
     }
 
     /**
@@ -82,7 +83,17 @@ class blogControl extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $blog=blog::find($id);
+        $this->validate($request,[
+            'title'=>'required',
+            'body'=>'required']);
+        
+        $blog->title=$request->title;
+        
+        $blog->body=$request->body;
+        
+        $blog->save();
+        return redirect('/blog')->with('Success','Post Edited Successfully');
     }
 
     /**
