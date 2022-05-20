@@ -14,7 +14,7 @@ class blogControl extends Controller
      */
     public function index()
     {
-        $blog=blog::orderBy('title','desc')->get();
+        $blog=blog::orderBy('created_at','desc')->get();
         return view('pages.blog')->with('blog',$blog);
     }
 
@@ -93,7 +93,7 @@ class blogControl extends Controller
         $blog->body=$request->body;
         
         $blog->save();
-        return redirect('/blog')->with('Success','Post Edited Successfully');
+        return redirect('/blog/'.$blog->id)->with('Success','Post Edited Successfully');
     }
 
     /**
@@ -104,6 +104,10 @@ class blogControl extends Controller
      */
     public function destroy($id)
     {
+        $blog=blog::find($id);
+        $blog->destroy($blog->id);
+        return redirect('/blog')->with('Success','Post Deleted Successfully');
+ 
         //
     }
 }
