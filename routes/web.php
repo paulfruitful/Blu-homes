@@ -22,3 +22,12 @@ Route::resource('blog',blogControl::class);
 Route::post('add',[blogControl::class,'store']);
 Route::post('/add',[blogControl::class,'store'])->name('add');
 Route::get('/shop',[PagesController::class,'shop']);
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
