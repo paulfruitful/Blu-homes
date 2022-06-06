@@ -1,7 +1,8 @@
-@extends('layouts.boiler')
-    
-      @section('content')
-          
+<html>
+          <head>
+
+          </head>
+      <body>
       
             <nav class="navbar-nav">
                 <h1> <a href="/">Blu Homes</a> </h1>
@@ -14,4 +15,5 @@
 
             </nav>
         </div>
- @endsection 
+    </body>
+ </html>
