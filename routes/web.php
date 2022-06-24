@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\blogControl;
+use App\Models\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,6 +29,10 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        $user_id=auth()->user()->id;
+       
+        $user=User::find($user_id);
+        
+        return view('dashboard')->with('blogs',$user);
     })->name('dashboard');
 });
