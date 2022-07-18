@@ -22,6 +22,7 @@
         </style>
     </head>
     <body>
+        <div class="j" style="margin-top: -30px"></div>
         @include('layouts/nav')
         @yield('content')
        
