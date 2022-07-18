@@ -34,7 +34,7 @@
     }
     
 </style>
-<form action="{{route('add')}}" method="post">
+<form action="/blog" method="post">
     <label >Title: <input type="text" name="title" id="title"placeholder="Title"></label>
      <label>Body: <input type="text" name="body" id="body"></label>
      <input type="hidden" name="_token" id="token" value="{{csrf_token()}}">

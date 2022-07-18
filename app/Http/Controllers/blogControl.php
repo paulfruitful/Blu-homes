@@ -14,7 +14,8 @@ class blogControl extends Controller
      */
     public function index()
     {
-        $blog=blog::orderBy('created_at','desc')->get();
+        $blog=blog::all();
+        
         return view('pages.blog')->with('blog',$blog);
     }
 
@@ -56,10 +57,10 @@ class blogControl extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(blog $blog)
     {
-        $blog=blog::find($id);
-        return view('pages.show',compact('blog',$blog));
+        
+        return view('pages.show',['blog'=>$blog]);
     }
 
     /**
@@ -71,7 +72,7 @@ class blogControl extends Controller
     public function edit($id)
     {
         $blog=blog::find($id);
-        return view('pages.edit')->with('blog',$blog);
+        return view('pages.edit',['blog'=>$blog]);
     }
 
     /**
