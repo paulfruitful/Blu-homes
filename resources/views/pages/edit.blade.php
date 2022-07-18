@@ -36,11 +36,19 @@
 </style>
 
 <form action="/blog/{{$blog->id}}" method="post">
-    <label >Title: <input type="text" name="title" id="title"value="{!!$blog->title!!}"placeholder="Title"></label>
-     <label>Body: <input type="text" name="body" value="{!!$blog->body!!}" id="body"></label>
-   @method('PATCH')
-     <input type="hidden" name="_token" id="token" value="{{csrf_token()}}">
-     <input type="submit" id="submit" value="Submit" style="width: 120px; align-self:baseline;">
+    <div class="mb-5"></div>
+    <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label" value="{!!$blog->title!!}">Title</label>
+     <input type="text" name="title" id="title"placeholder="Title" class="form-control">
+     </div>
+     <div class="mb-3">
+<label for="exampleFormControlInput1" class="form-label" value="{!!$blog->body!!}">Body</label>
 
+   <textarea name="body" id="body" class="form-control"></textarea>
+     <input type="hidden" name="_token" id="token" value="{{csrf_token()}}">
+     
+</div><input type="submit" id="submit" value="Submit" class="btn btn-primary mb-3">
+@method('PATCH')
+     
 </form>
 @endsection

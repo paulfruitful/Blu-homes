@@ -33,6 +33,6 @@ Route::middleware([
        
         $user=User::find($user_id);
         
-        return view('dashboard')->with('blogs',$user);
+        return view('dashboard',['blogs'=>$user]);
     })->name('dashboard');
 });
