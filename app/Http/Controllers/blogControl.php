@@ -39,15 +39,14 @@ class blogControl extends Controller
     public function store(Request $request)
     {
         //
-        $this->validate($request,[
+       $blog_post= $request->validate([
             'title'=>'required',
-            'body'=>'required']);
-        $blog=new blog;
-        $blog->title=$request->title;
-        
-        $blog->body=$request->body;
-        
-        $blog->save();
+            'body'=>'required',
+            'picture'=>'required']);
+            if($request->hasFile('picture')){
+                $blog_post['picture']=$request->file('picture')->store('blog_photos','public');
+            }
+        blog::create($blog_post);
         return redirect('/blog')->with('Success','Post Created Successfully');
     }
 
@@ -69,9 +68,9 @@ class blogControl extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(blog $blog)
     {
-        $blog=blog::find($id);
+        
         return view('pages.edit',['blog'=>$blog]);
     }
 
@@ -82,19 +81,14 @@ class blogControl extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, blog $blog)
     {
-        $blog=blog::find($id);
-        $this->validate($request,[
-            'title'=>'required',
-            'body'=>'required']);
-        
-        $blog->title=$request->title;
-        
-        $blog->body=$request->body;
-        
-        $blog->save();
-        return redirect('/blog/'.$blog->id)->with('Success','Post Edited Successfully');
+        $blog= $request->validate([
+             'title'=>'required',
+             'body'=>'required',
+             'picture'=>'required']);
+         blog::update($blog);
+        return redirect('/blog/'.$blog)->with('Success','Post Edited Successfully');
     }
 
     /**

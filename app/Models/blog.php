@@ -9,7 +9,11 @@ use App\Models\User;
 class blog extends Model
 {
     use HasFactory;
-
+  protected $fillable=[
+    'title',
+    'body',
+    'pics'
+  ];
     public function has(){
         return $this->belongsTo(User::class);
     }
