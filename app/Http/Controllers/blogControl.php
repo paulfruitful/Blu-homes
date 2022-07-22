@@ -39,14 +39,17 @@ class blogControl extends Controller
     public function store(Request $request)
     {
         //
-       $blog_post= $request->validate([
+        $request->validate([
             'title'=>'required',
             'body'=>'required',
             'picture'=>'required']);
+            $blog= new blog;
+            $blog->title=$request->title;
+            $blog->body=$request->body;
             if($request->hasFile('picture')){
-                $blog_post['picture']=$request->file('picture')->store('blog_photos','public');
+                $blog['pics']=$request->file('picture')->store('blog_photos','public');
             }
-        blog::create($blog_post);
+            $blog->save();
         return redirect('/blog')->with('Success','Post Created Successfully');
     }
 

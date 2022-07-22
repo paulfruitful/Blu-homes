@@ -1,6 +1,9 @@
 @extends('layouts.boiler');
 
 @section('content')
+
+<img src="/storage/{{$blog->pics}}">
+   
 <h1>{!!$blog->title!!}</h1>
 <p>{!!$blog->body!!}</p>
 @if($blog->created_at===$blog->updated_at)
