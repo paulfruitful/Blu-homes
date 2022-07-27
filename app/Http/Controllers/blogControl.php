@@ -85,13 +85,17 @@ class blogControl extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, blog $blog)
-    {
-        $blog= $request->validate([
-             'title'=>'required',
-             'body'=>'required',
-             'picture'=>'required']);
-         blog::update($blog);
-        return redirect('/blog/'.$blog)->with('Success','Post Edited Successfully');
+    {         
+        $form_data=    $request->validate([ 
+            'title'=>'required',
+        'body'=>'required']);
+       
+        if($request->hasFile('picture')){
+            $form_data['pics']=$request->file('picture')->store('blog_photos','public');
+        }
+        $blog->update($form_data);
+
+        return redirect('/blog/'.$blog->id)->with('Success','Post Edited Successfully');
     }
 
     /**
