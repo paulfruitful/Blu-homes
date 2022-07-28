@@ -5,10 +5,10 @@
    
 <h1>{!!$blog->title!!}</h1>
 @if($blog->pics)
-<img src=" /storage/{{$blog->pics}}">
+<img src=" /storage/{{$blog->pics}}" class="img-fluid">
 @else
 
-<img src="{{asset('views/Nolmage.jpg')}}">
+<img src="{{asset('/views/Nolmage.jpg')}}">
 @endif
 <p>{!!$blog->body!!}</p>
 @if($blog->created_at===$blog->updated_at)
