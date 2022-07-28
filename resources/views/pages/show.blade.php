@@ -1,11 +1,13 @@
 @extends('layouts.boiler');
 
 @section('content')
-
-   
+<div class="container-sm">
+    <!-- Content here -->
+  
+<div class="container-fluid">
 <h1>{!!$blog->title!!}</h1>
 @if($blog->pics)
-<img src=" /storage/{{$blog->pics}}" class="img-fluid">
+<img src=" /storage/{{$blog->pics}}" class="rounded float-start">
 @else
 
 <img src="{{asset('/views/Nolmage.jpg')}}">
@@ -19,8 +21,8 @@
 <small><b>Updated at {{$blog->updated_at}}</b></small>
 @endif
 @auth
-<a href="/blog/{{$blog->id}}/edit">Edit Post</a>
-<form action="/blog/{{$blog->id}}" method="POST">
+<a href="/blog/{{$blog->id}}/edit" class="btn btn-primary">Edit Post</a>
+<form action="/blog/{{$blog->id}}" method="POST" class="btn btn-warning">
     @method('DELETE')
     <input type="hidden" name="_token" id="token" value="{{csrf_token()}}">
 <input type="submit" value="Delete">
@@ -28,4 +30,6 @@
 @else
 <div></div>
 @endauth
+</div>
+</div>
 @endsection
