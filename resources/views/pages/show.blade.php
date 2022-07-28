@@ -2,9 +2,14 @@
 
 @section('content')
 
-<img src="/storage/{{$blog->pics}}">
    
 <h1>{!!$blog->title!!}</h1>
+@if($blog->pics)
+<img src=" /storage/{{$blog->pics}}">
+@else
+
+<img src="{{asset('views/Nolmage.jpg')}}">
+@endif
 <p>{!!$blog->body!!}</p>
 @if($blog->created_at===$blog->updated_at)
 <small><b>Created at {{$blog->created_at}}</b></small>
