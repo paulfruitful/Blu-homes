@@ -6,10 +6,14 @@
   
 <div class="container-fluid">
 <div class="container text-center">
-<h1>{!!$blog->title!!}</h1>
+<h1 class="display-4">{!!$blog->title!!}</h1>
 </div>
+<div class="row">
 @if($blog->pics)
-<img src=" /storage/{{$blog->pics}}" class="rounded float-start">
+<div class="col-sm-12">
+    <div class="container-fluid">
+    <div class="container text-center">
+<img src=" /storage/{{$blog->pics}}" class="rounded float-start"></div></div></div>
 @else
 
 <img src="{{asset('/views/Nolmage.jpg')}}">
@@ -32,6 +36,7 @@
 @else
 <div></div>
 @endauth
+</div>
 </div>
 </div>
 @endsection

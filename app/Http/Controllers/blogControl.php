@@ -14,9 +14,11 @@ class blogControl extends Controller
      */
     public function index()
     {
-        $blog=blog::all();
+        $blog=blog::paginate(3);
         
-        return view('pages.blog')->with('blog',$blog);
+        return view('pages.blog',[
+            "blog"=>blog::latest()->paginate(2)->get()
+    ]);
     }
 
     /**
