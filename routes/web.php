@@ -19,7 +19,14 @@ use App\Models\User;
 Route::get('/',[PagesController::class,'index']);
 Route::get('/about',[PagesController::class,'about']);
 Route::get('/services',[PagesController::class,'services']);
-Route::resource('blog',[blogControl::class])->middleware('auth:sanctum');
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function(){
+    Route::resource('blog',[blogControl::class]);
+});
 Route::post('add',[blogControl::class,'store']);
 //Route::post('/add',[blogControl::class,'store'])->name('add');
 Route::get('/shop',[PagesController::class,'shop']);
