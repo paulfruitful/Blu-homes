@@ -14,7 +14,7 @@ class blog extends Model
     'body',
     'pics'
   ];
-    public function has(){
-        return $this->belongsTo(User::class);
+    public function user(){
+        return $this->belongsTo(User::class,'user_id');
     }
 }
