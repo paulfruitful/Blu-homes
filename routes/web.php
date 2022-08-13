@@ -19,7 +19,7 @@ use App\Models\User;
 Route::get('/',[PagesController::class,'index']);
 Route::get('/about',[PagesController::class,'about']);
 Route::get('/services',[PagesController::class,'services']);
-Route::resource('blog',blogControl::class);
+Route::resource('blog',[blogControl::class])->middleware('sanctum');
 Route::post('add',[blogControl::class,'store']);
 //Route::post('/add',[blogControl::class,'store'])->name('add');
 Route::get('/shop',[PagesController::class,'shop']);
