@@ -14,10 +14,8 @@ class blogControl extends Controller
      */
     public function index()
     {
-       $blog=blog::latest()->Simplepaginate(5);
-        return view('pages.blog',[
-            "blog"=>$blog
-    ]);
+       $blog=blog::paginate(8);
+        return view('pages.blog',compact('blog'));
     }
 
     /**
