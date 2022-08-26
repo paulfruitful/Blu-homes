@@ -15,7 +15,7 @@
 
 @endif
 <div class="m-6">
-    {{$blog->link}}
+    {!!$blog->link()!!}
 </div>
 
 @endsection
