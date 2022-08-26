@@ -2,8 +2,8 @@
 
 
 @section('content')
-@if(count($blog)>=1)
-@foreach ($blog as $blog)
+@if(count($blogs)>=1)
+@foreach ($blogs as $blog)
 
    <div class="card">
         <div class="card-body">
