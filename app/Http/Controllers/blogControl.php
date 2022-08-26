@@ -14,7 +14,7 @@ class blogControl extends Controller
      */
     public function index()
     {
-       $blog=blog::paginate(8);
+       $blog=blog::all();
         return view('pages.blog',compact('blog'));
     }
 
