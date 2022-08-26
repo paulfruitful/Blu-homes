@@ -14,6 +14,8 @@
 @endforeach
 
 @endif
-
+<div class="d-flex justify-content-center">
+    {!! $blog->links() !!}
+</div>
 
 @endsection
