@@ -16,7 +16,7 @@ class blogControl extends Controller
     {
        
         return view('pages.blog',[
-            "blog"=>blog::latest()->paginate(3)
+            "blog"=>$blog
     ]);
     }
 
