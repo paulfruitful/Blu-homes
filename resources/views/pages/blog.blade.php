@@ -14,5 +14,8 @@
 @endforeach
 
 @endif
+<div class="m-6">
+    {{$blog->link}}
+</div>
 
 @endsection
