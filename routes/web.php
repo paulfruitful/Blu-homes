@@ -24,6 +24,7 @@ Route::get('/services',[PagesController::class,'services']);
 Route::resource('blog',blogControl::class);
 Route::get('/blog/create',[blogControl::class,'create'])->middleware('auth');
 
+Route::get('/blog/{blog}/edit',[blogControl::class,'edit'])->middleware('auth');
 Route::post('add',[blogControl::class,'store']);
 Route::post('/add',[blogControl::class,'store'])->name('add');
 Route::get('/shop',[PagesController::class,'shop']);
