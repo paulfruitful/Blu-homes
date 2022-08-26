@@ -15,7 +15,7 @@
 
 @endif
 <div class="d-flex justify-content-center">
-    {!! $blog->links() !!}
+    {!! $blogs->links() !!}
 </div>
 
 @endsection
