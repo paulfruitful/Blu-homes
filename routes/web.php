@@ -24,7 +24,7 @@ Route::get('/services',[PagesController::class,'services']);
 Route::resource('blog',[blogControl::class]);
 
 Route::post('add',[blogControl::class,'store']);
-//Route::post('/add',[blogControl::class,'store'])->name('add');
+Route::post('/add',[blogControl::class,'store'])->name('add');
 Route::get('/shop',[PagesController::class,'shop']);
 Route::middleware([
     'auth:sanctum',
