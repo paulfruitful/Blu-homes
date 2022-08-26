@@ -15,10 +15,7 @@
 
 @endif
 <div class="m-6">
-    @php
-        use App\Models\blog;
-        blog::links();
-    @endphp
+ 
 </div>
 
 @endsection
