@@ -33,9 +33,8 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        $user_id=auth()->user();
+        auth()->user();
        
-        $user=User::find($user_id);
         
         return view('dashboard',['blogs'=>]);
     })->name('dashboard');
