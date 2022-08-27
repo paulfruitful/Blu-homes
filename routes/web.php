@@ -33,11 +33,11 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        $user_id=auth()->user()->id;
+        $user_id=auth()->user();
        
         $user=User::find($user_id);
         
-        return view('dashboard',['blogs'=>$user]);
+        return view('dashboard',['blogs'=>]);
     })->name('dashboard');
 });
 Route::get('/blog/create',[blogControl::class,'create'])->middleware('auth');
