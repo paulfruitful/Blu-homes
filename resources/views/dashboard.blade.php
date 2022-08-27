@@ -9,7 +9,7 @@
 
                         <div class="container-sm">
                     <div class="row">
-                        <div class="col">
+                        <div class="col align-self-center">
           <a href="/blog/create" class="btn btn-primary">Create New Blog</a></div>
    </div>
    </div>
