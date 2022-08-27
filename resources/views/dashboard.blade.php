@@ -24,9 +24,5 @@
 @endforeach
 
 @endif
-<div class="d-flex justify-content-center">
-    {!! $blogs->links() !!}
-</div>
-
 
 </x-app-layout>
