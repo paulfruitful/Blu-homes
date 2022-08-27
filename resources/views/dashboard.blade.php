@@ -13,14 +13,15 @@
             <div class="col-3">
                 <div class="col-3">
                     <div class="col-3">
+                        <div class="container-sm">
           <a href="/blog/create" class="btn btn-primary">Create New Blog</a>
-      </div> 
+ </div>   
+  </div> 
      </div>
     </div>
     </div>
   </div>
   </div>
-  <div class="container"></div>
   @if(count($blogs)>=1)
 @foreach ($blogs as $blog)
 <div class="container-sm">
