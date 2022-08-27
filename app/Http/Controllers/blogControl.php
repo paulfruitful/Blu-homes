@@ -45,6 +45,7 @@ class blogControl extends Controller
             $blog= new blog;
             $blog->title=$request->title;
             $blog->body=$request->body;
+            $blog->user_id=auth()->id();
             if($request->hasFile('picture')){
                 $blog['pics']=$request->file('picture')->store('blog_photos','public');
             }
