@@ -14,7 +14,7 @@
             <div class="col-3">
                 <div class="col-3">
                     <div class="col-3">
-                    <div class="row"></div>align-items-center
+                    <div class="row align-items-center"></div>
           <a href="/blog/create" class="btn btn-primary">Create New Blog</a>
    
   </div> 
