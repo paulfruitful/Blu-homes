@@ -20,7 +20,7 @@
     </div>
   </div>
   </div>
-  <div class="row"></div>
+  <div class="container"></div>
   @if(count($blogs)>=1)
 @foreach ($blogs as $blog)
 
