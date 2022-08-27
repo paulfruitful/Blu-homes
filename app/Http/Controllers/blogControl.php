@@ -50,7 +50,7 @@ class blogControl extends Controller
                 $blog['pics']=$request->file('picture')->store('blog_photos','public');
             }
             $blog->save();
-        return redirect('/blog')->with('Success','Post Created Successfully');
+        return redirect('/dashboard')->with('Success','Post Created Successfully');
     }
 
     /**
