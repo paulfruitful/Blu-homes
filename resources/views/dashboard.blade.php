@@ -8,7 +8,7 @@
     </x-slot>
 
                         <div class="container-sm">
-                    <div class="row align-items-center">
+                    <div class="row">
                         <div class="col">
           <a href="/blog/create" class="btn btn-primary">Create New Blog</a></div>
    </div>
