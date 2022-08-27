@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
 
      ]);
      \App\Models\blog::factory(17)->create([
-        'user_id'=>$user->id
+        'user_id'=>2
      ]);
     }
 }
