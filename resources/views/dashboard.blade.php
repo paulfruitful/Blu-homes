@@ -10,7 +10,9 @@
   <div class="row">
       <div class="col-12">
         <div class="col-6">
-          <a href="/blog/create" class="btn btn-primary">Create New Blog</a>
+            <div class="col-3">
+                <div class="col-3">
+          <a href="/blog/create" class="btn btn-primary">Create New Blog</a></div></div>
     </div>  </div>
   </div>
   @if(count($blogs)>=1)
