@@ -33,10 +33,10 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        auth()->user();
+        
        
         
-        return view('dashboard',['blogs'=>]);
+        return view('dashboard',['blogs'=>auth()->user()->blog]);
     })->name('dashboard');
 });
 Route::get('/blog/create',[blogControl::class,'create'])->middleware('auth');
