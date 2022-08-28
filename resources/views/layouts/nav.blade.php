@@ -9,10 +9,10 @@
                 <div class="container-fluid">
                 <h1 class="navbar-brand"> <a href="/">Blu Homes</a> </h1>
                 
-                    <li class="nav-link"><a href="/about" > About</a></li>
-                    <li class="nav-link"> <a href="/services"> Services</a></li>
-                    <li class="nav-link"><a href="/blog"> Blog</a></li>
-                    <li class="nav-link"> <a href="/shop"> Homes</a></li>
+                    <li class="nav-item"><a href="/about" class="nav-link"> About</a></li>
+                    <li class="nav-item"> <a href="/services" class="nav-link"> Services</a></li>
+                    <li class="nav-item"><a href="/blog" class="nav-link"> Blog</a></li>
+                    <li class="nav-item"> <a href="/shop" class="nav-link"> Homes</a></li>
                 </div>
 
             </nav>
