@@ -5,6 +5,7 @@
     <!-- Content here -->
   
 <div class="container-fluid">
+    <i class="bi bi-arrow-bar-left"></i>
 <div class="container text-center">
 <h1 class="display-4">{!!$blog->title!!}</h1>
 </div>
