@@ -26,7 +26,6 @@
 <div class="row">
     <div class="col align-self-start">
     
-<small><b>Created at {{$blog->created_at}}</b></small>
 </div>
     <div class="col align-self-center">
 <a href="/blog/{{$blog->id}}/edit" class="btn btn-warning">Edit Post</a></div>
