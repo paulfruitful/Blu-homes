@@ -24,9 +24,6 @@
 @auth
 <div class="container-sm">
 <div class="row">
-    <div class="col align-self-start">
-    
-</div>
     <div class="col align-self-center">
 <a href="/blog/{{$blog->id}}/edit" class="btn btn-warning">Edit Post</a></div>
    <div class="col align-self-end">
