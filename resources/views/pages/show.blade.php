@@ -19,13 +19,10 @@
 <img src="">
 @endif
 <p>{!!$blog->body!!}</p>
-@if($blog->created_at===$blog->updated_at)
 <small><b>Created at {{$blog->created_at}}</b></small>
 
     
-@else
-<small><b>Updated at {{$blog->updated_at}}</b></small>
-@endif
+
 @auth
 <div class="container-sm">
 <div class="row">
@@ -35,7 +32,7 @@
 <form action="/blog/{{$blog->id}}" method="POST" >
     @method('DELETE')
     @csrf
-<input type="submit" value="Delete" class="btn btn-warning">
+<input type="submit" value="Delete" class="btn btn-danger">
 </form>
 </div>
 </div>
