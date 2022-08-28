@@ -30,7 +30,7 @@
 <a href="/blog/{{$blog->id}}/edit" class="btn btn-primary">Edit Post</a>
 <form action="/blog/{{$blog->id}}" method="POST" >
     @method('DELETE')
-    <input type="hidden" name="_token" id="token" value="{{csrf_token()}}">
+    @csrf
 <input type="submit" value="Delete" class="btn btn-warning">
 </form>
 @else
