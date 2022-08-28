@@ -6,3 +6,22 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
+    <div class="container p-2">
+        <div class="row">
+            <div class="col align-self-end">
+<a href="/blog/create" class="btn btn-primary">Create New Blog</a></div>
+</div>
+</div>
+@if(count($blogs)>=1)
+@foreach ($blogs as $blog)
+<div class="container-sm">
+<div class="card">
+<div class="card-body">
+<h3 class="card-title"><a href="/blog/{{$blog->id}}">{{$blog->title}}</a></h3><a href="/blog/{{$blog->id}}/edit" class="btn btn-prmary align-self-end">Edit Post</a>
+<small class="card-body">Written at {{$blog->created_at}}</small>
+</div>
+</div>
+</div>
+@endforeach
+
+@endif
