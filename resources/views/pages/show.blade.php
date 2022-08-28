@@ -16,7 +16,7 @@
 <img src=" /storage/{{$blog->pics}}" class="rounded float-start"></div></div></div>
 @else
 
-<img src="{{asset('/views/Nolmage.jpg')}}">
+<img src="">
 @endif
 <p>{!!$blog->body!!}</p>
 @if($blog->created_at===$blog->updated_at)
