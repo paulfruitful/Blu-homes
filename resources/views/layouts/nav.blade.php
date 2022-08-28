@@ -10,7 +10,7 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
-                      <div class=""></div>
+                      <div class="collapse navbar-collapse" id="navbarTogglerDemo01"></div>
                 <h1 class="navbar-brand"> <a href="/">Blu Homes</a> </h1>
                 
                     <li class="nav-link"><a href="/about"> About</a></li>
