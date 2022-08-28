@@ -18,14 +18,15 @@
 
 <img src="">
 @endif
-<p>{!!$blog->body!!}</p>
-<small><b>Created at {{$blog->created_at}}</b></small>
 
     
 
 @auth
 <div class="container-sm">
 <div class="row">
+    <p>{!!$blog->body!!}</p>
+<small><b>Created at {{$blog->created_at}}</b></small>
+
     <div class="col align-self-start">
 <a href="/blog/{{$blog->id}}/edit" class="btn btn-warning">Edit Post</a></div>
    <div class="col align-self-end">
