@@ -25,3 +25,4 @@
 @endforeach
 
 @endif
+</x-app-layout>
