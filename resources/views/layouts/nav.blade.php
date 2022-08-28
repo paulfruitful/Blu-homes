@@ -16,7 +16,8 @@
                     <li class="nav-item"><a href="/about" class="nav-link"> About</a></li>
                     <li class="nav-item"> <a href="/services" class="nav-link"> Services</a></li>
                     <li class="nav-link"><a href="/blog"> Blog</a></li>
-                    <li class="nav-link"> <a href="/shop"> Homes</a></li></ul>
+                    <li class="nav-link"> <a href="/shop"> Homes</a></li>
+                </ul>
                 </div>
                 </div>
 
