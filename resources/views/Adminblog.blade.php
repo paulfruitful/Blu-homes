@@ -19,10 +19,11 @@
      <div class="col align-self-start"> 
 <div class="card">
 <div class="card-body">
-<h3 class="card-title"><a href="/blog/{{$blog->id}}">{{$blog->title}}</a></h3><a href="/blog/{{$blog->id}}/edit" class="btn btn-prmary align-self-end">Edit Post</a>
+<h3 class="card-title"><a href="/blog/{{$blog->id}}">{{$blog->title}}</a></h3>
 <small class="card-body">Written at {{$blog->created_at}}</small>
 </div> 
 <div class="col align-self-end">
+    <a href="/blog/{{$blog->id}}/edit" class="btn btn-prmary align-self-end">Edit Post</a>
     </div> 
 </div>
 </div>
