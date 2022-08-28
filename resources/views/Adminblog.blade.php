@@ -21,7 +21,9 @@
 <div class="card-body">
 <h3 class="card-title"><a href="/blog/{{$blog->id}}">{{$blog->title}}</a></h3><a href="/blog/{{$blog->id}}/edit" class="btn btn-prmary align-self-end">Edit Post</a>
 <small class="card-body">Written at {{$blog->created_at}}</small>
-</div>  
+</div> 
+<div class="col align-self-end">
+    </div> 
 </div>
 </div>
 </div>
