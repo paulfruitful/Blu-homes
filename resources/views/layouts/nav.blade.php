@@ -5,7 +5,7 @@
           </head>
       <body>
       
-            <nav class="navbar navbar-expand-lg bg-dark" >
+            <nav class="navbar navbar-expand-lg bg-light" >
                 <div class="container-fluid">
                 <h1 class="navbar-brand"> <a href="/">Blu Homes</a> </h1>
                 
