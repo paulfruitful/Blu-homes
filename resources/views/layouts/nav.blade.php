@@ -5,23 +5,17 @@
           </head>
       <body>
       
-            <nav class="navbar navbar-expand-lg sticky-top bg-light">
+            <nav class="navbar navbar-expand-lg bg-light">
                 <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <h1 class="navbar-brand"> <a href="/">Blu Homes</a> </h1>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a href="/about" class="nav-link"> About</a></li>
-                    <li class="nav-item"> <a href="/services" class="nav-link"> Services</a></li>
-                    <li class="nav-item"><a href="/blog" class="nav-link"> Blog</a></li>
-                    <li class="nav-item"> <a href="/shop" class="nav-link"> Homes</a></li>
-                </ul>
-                </div>
+                
+                    <li class="nav-link"><a href="/about"> About</a></li>
+                    <li class="nav-link"> <a href="/services"> Services</a></li>
+                    <li class="nav-link"><a href="/blog"> Blog</a></li>
+                    <li class="nav-link"> <a href="/shop"> Homes</a></li>
                 </div>
 
             </nav>
-        
+        </div>
     </body>
  
