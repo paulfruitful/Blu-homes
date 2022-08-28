@@ -31,11 +31,13 @@
 <div class="row">
     <div class="col align-self-start">
 <a href="/blog/{{$blog->id}}/edit" class="btn btn-primary">Edit Post</a></div>
+   <div class="col align-self-end">
 <form action="/blog/{{$blog->id}}" method="POST" >
     @method('DELETE')
     @csrf
 <input type="submit" value="Delete" class="btn btn-warning">
 </form>
+</div>
 </div>
 </div>
 </div>
