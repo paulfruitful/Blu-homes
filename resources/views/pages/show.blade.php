@@ -27,13 +27,14 @@
 <small><b>Updated at {{$blog->updated_at}}</b></small>
 @endif
 @auth
-<div class="container-sm"></div>
+<div class="container-sm">
 <a href="/blog/{{$blog->id}}/edit" class="btn btn-primary">Edit Post</a>
 <form action="/blog/{{$blog->id}}" method="POST" >
     @method('DELETE')
     @csrf
 <input type="submit" value="Delete" class="btn btn-warning">
 </form>
+</div>
 @else
 <div></div>
 @endauth
