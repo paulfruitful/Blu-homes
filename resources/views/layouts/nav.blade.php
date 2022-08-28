@@ -12,11 +12,11 @@
                       </button>
                       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <h1 class="navbar-brand"> <a href="/">Blu Homes</a> </h1>
-                
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-link"><a href="/about"> About</a></li>
                     <li class="nav-link"> <a href="/services"> Services</a></li>
                     <li class="nav-link"><a href="/blog"> Blog</a></li>
-                    <li class="nav-link"> <a href="/shop"> Homes</a></li>
+                    <li class="nav-link"> <a href="/shop"> Homes</a></li></ul>
                 </div>
                 </div>
 
