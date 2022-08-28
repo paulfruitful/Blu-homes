@@ -28,12 +28,14 @@
 @endif
 @auth
 <div class="container-sm">
+<div class="row">
 <a href="/blog/{{$blog->id}}/edit" class="btn btn-primary">Edit Post</a>
 <form action="/blog/{{$blog->id}}" method="POST" >
     @method('DELETE')
     @csrf
 <input type="submit" value="Delete" class="btn btn-warning">
 </form>
+</div>
 </div>
 </div>
 </div>
