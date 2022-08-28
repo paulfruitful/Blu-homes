@@ -28,7 +28,7 @@
     
 <small><b>Created at {{$blog->created_at}}</b></small>
 </div>
-    <div class="col align-self-start">
+    <div class="col align-self-center">
 <a href="/blog/{{$blog->id}}/edit" class="btn btn-warning">Edit Post</a></div>
    <div class="col align-self-end">
 <form action="/blog/{{$blog->id}}" method="POST" >
