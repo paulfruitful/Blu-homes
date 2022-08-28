@@ -27,6 +27,7 @@
 <small><b>Updated at {{$blog->updated_at}}</b></small>
 @endif
 @auth
+<div class="container-sm"></div>
 <a href="/blog/{{$blog->id}}/edit" class="btn btn-primary">Edit Post</a>
 <form action="/blog/{{$blog->id}}" method="POST" >
     @method('DELETE')
