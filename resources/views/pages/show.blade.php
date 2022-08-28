@@ -35,10 +35,11 @@
 <input type="submit" value="Delete" class="btn btn-warning">
 </form>
 </div>
+</div>
+</div>
+</div>
 @else
 <div></div>
 @endauth
-</div>
-</div>
-</div>
+
 @endsection
