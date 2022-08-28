@@ -29,7 +29,8 @@
 @auth
 <div class="container-sm">
 <div class="row">
-<a href="/blog/{{$blog->id}}/edit" class="btn btn-primary">Edit Post</a>
+    <div class="col align-self-start">
+<a href="/blog/{{$blog->id}}/edit" class="btn btn-primary">Edit Post</a></div>
 <form action="/blog/{{$blog->id}}" method="POST" >
     @method('DELETE')
     @csrf
