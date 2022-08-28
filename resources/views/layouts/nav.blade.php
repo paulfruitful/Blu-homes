@@ -5,11 +5,11 @@
           </head>
       <body>
       
-            <nav class="navbar navbar-expand-lg bg-dark">
+            <nav class="navbar navbar-expand-lg bg-dark" >
                 <div class="container-fluid">
                 <h1 class="navbar-brand"> <a href="/">Blu Homes</a> </h1>
                 
-                    <li class="nav-link"><a href="/about"> About</a></li>
+                    <li class="nav-link"><a href="/about" > About</a></li>
                     <li class="nav-link"> <a href="/services"> Services</a></li>
                     <li class="nav-link"><a href="/blog"> Blog</a></li>
                     <li class="nav-link"> <a href="/shop"> Homes</a></li>
